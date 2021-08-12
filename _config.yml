@@ -37,7 +37,7 @@ collections:
     order:
       - clio.md
       - broadridge.md
-  volunteer:
+  volunteer-work:
     organization: true
     position: true
     start_date: true
