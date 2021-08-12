@@ -1,6 +1,6 @@
 ---
 school: "CodeCore Developer Bootcamp"
-degree: "Web Development Certificate"
+degree: "Certificate, Web Development"
 start_date: "June 2017"
 end_date: "August 2017"
 ---
