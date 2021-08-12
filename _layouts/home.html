@@ -6,21 +6,37 @@ layout: default
   {%- if page.title -%}
   <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%} {{ content }} {%- if site.jobs.size > 0 -%}
-  <h2 class="post-list-heading">
-    {{ page.list_title | default: "Experience" }}
-  </h2>
+  <h2 class="post-list-heading">Experience</h2>
   <ul class="post-list">
     {%- for job in site.jobs -%}
     <li>
-      <span class="post-meta"
-        >{{ job.start_date }} - {{ job.end_date | date: date_format }}</span
-      >
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ job.company | escape }}
-        </a>
-      </h3>
+      <span class="post-meta">{{ job.start_date }} to {{ job.end_date }}</span>
+      <h3>{{ job.company | escape }}</h3>
       {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%} {%- if site.volunteer-work.size > 0 -%}
+  <h2 class="post-list-heading">Volunteering</h2>
+  <ul class="post-list">
+    {%- for volunteer in site.volunteer-work -%}
+    <li>
+      <span class="post-meta"
+        >{{ volunteer.start_date }} to {{ volunteer.end_date }}</span
+      >
+      <h3>{{ volunteer.organization | escape }}</h3>
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%} {%- if site.education.size > 0 -%}
+  <h2 class="post-list-heading">Education</h2>
+  <ul class="post-list">
+    {%- for education in site.education -%}
+    <li>
+      <span class="post-meta"
+        >{{ education.start_date }} to {{ education.end_date }}</span
+      >
+      <h3>{{ education.school | escape }}</h3>
     </li>
     {%- endfor -%}
   </ul>
