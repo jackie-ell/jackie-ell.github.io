@@ -28,6 +28,30 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: jackie-ell
 github_username: jackie-ell
 
+collections:
+  jobs:
+    company: true
+    position: true
+    start_date: true
+    end_date: true
+    order:
+      - clio.md
+      - broadridge.md
+  volunteer:
+    organization: true
+    position: true
+    start_date: true
+    end_date: true
+    order:
+      - vegan-hacktivists.md
+  education:
+    school: true
+    degree: true
+    start_date: true
+    end_date: true
+    order:
+      - codecore.md
+      - douglas-college.md
 # Build settings
 theme: minima
 plugins:

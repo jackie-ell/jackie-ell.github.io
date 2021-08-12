@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%} {{ content }} {%- if site.jobs.size > 0 -%}
+  <h2 class="post-list-heading">
+    {{ page.list_title | default: "Experience" }}
+  </h2>
+  <ul class="post-list">
+    {%- for job in site.jobs -%}
+    <li>
+      <span class="post-meta"
+        >{{ job.start_date }} - {{ job.end_date | date: date_format }}</span
+      >
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ job.company | escape }}
+        </a>
+      </h3>
+      {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%}
+</div>
