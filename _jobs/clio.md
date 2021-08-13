@@ -5,4 +5,5 @@ start_date: "August 2020"
 end_date: "Present"
 ---
 
-### TEST
+- Contributing to create a better billing system with Ruby on Rails, AngularJS
+- Working complete remotely in a distributed by design workplace
