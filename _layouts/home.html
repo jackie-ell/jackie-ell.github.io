@@ -12,7 +12,7 @@ layout: default
     <li>
       <span class="post-meta">{{ job.start_date }} to {{ job.end_date }}</span>
       <h3>{{ job.company | escape }}</h3>
-      {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
+      {%- if job.content -%} {{job.content}} {%- endif -%}
     </li>
     {%- endfor -%}
   </ul>
@@ -25,6 +25,7 @@ layout: default
         >{{ volunteer.start_date }} to {{ volunteer.end_date }}</span
       >
       <h3>{{ volunteer.organization | escape }}</h3>
+      {%- if volunteer.content -%} {{ volunteer.content }} {%- endif -%}
     </li>
     {%- endfor -%}
   </ul>
@@ -37,6 +38,7 @@ layout: default
         >{{ education.start_date }} to {{ education.end_date }}</span
       >
       <h3>{{ education.school | escape }}</h3>
+      {%- if education.content -%} {{ education.content }} {%- endif -%}
     </li>
     {%- endfor -%}
   </ul>
