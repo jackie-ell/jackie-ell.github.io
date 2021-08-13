@@ -34,9 +34,7 @@ collections:
     position: true
     start_date: true
     end_date: true
-    order:
-      - clio.md
-      - broadridge.md
+    sorting_order: false
   volunteer-work:
     organization: true
     position: true

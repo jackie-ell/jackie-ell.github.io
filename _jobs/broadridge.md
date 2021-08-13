@@ -3,6 +3,7 @@ company: "Broadridge Financial Solutions"
 position: "Programmer Analyst"
 start_date: "November 2017"
 end_date: "August 2020"
+reading_order: 0
 ---
 
 - Rebuilt legacy, procedural code with OOP designs - Drastically lowered new client on-boarding time by months (OpenEdge Progress)
